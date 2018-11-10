@@ -9,8 +9,6 @@ import threading
 import jpyutil
 import jpy
 
-Program = jpy.get_type("org.techlyric.routes.process.Program")
-EventBus = jpy.get_type("com.google.common.eventbus.EventBus")
 # HTML code. Browser will navigate to a Data uri created
 # from this html code.
 HTML_code = """
@@ -77,11 +75,7 @@ def main():
     set_client_handlers(browser)
     set_javascript_bindings(browser)
 
-    Program.post("Event: Entering CEF Message Loop")
-
     cef.MessageLoop()
-
-    Program.post("Event: Shutting Down")
 
     cef.Shutdown()
 

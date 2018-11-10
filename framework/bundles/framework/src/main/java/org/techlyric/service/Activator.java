@@ -18,7 +18,7 @@ public class Activator implements BundleActivator {
 	public void start(BundleContext bundleContext) throws Exception {
 		Activator.context = bundleContext;
 		String[] args = {};
-		HttpServer.run(args);
+
 	}
 
 	/*
